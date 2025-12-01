@@ -55,7 +55,7 @@ services:
 
 
 
-        networks:
+networks:
   app-net:
 
 volumes:
