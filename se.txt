@@ -1,3 +1,13 @@
+           <dependency>
+               <groupId>javax.servlet</groupId>
+               <artifactId>javax.servlet-api</artifactId>
+               <version>4.0.1</version>
+               <scope>provided</scope>
+           </dependency>
+
+MAVEN WEB DEPENDENCY SERVLET API
+
+
 tomcat-user file code (web deploy tomcat)
 
 <role rolename="manager-gui"/>
@@ -267,5 +277,6 @@ security-gtp -> wizard-5 (exmp) -> edit inbound
 
 icacls D:\mynewkey.pem /inheritance:r
 icacls D:\mynewkey.pem /grant:r %USERNAME%:R
+
 
 
