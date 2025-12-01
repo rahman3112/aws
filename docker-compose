@@ -119,5 +119,5 @@ CMD ["python", "app.py"]
     depends_on:
       - db
 
-
+docker compose up --build
         
