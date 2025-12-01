@@ -218,7 +218,14 @@ cd awsprac(repo)
 
 nano Dockerfile
 code:
-FROM nginx:alpine                                                                                                                                                                                                  COPY . /usr/share/nginx/html                                                                                                                                                                                                                         
+FROM nginx:alpine
+
+# Delete default nginx page
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy your project files (including index.html) to nginx directory
+COPY . /usr/share/nginx/html
+
 (o+enter+x)
 
 
@@ -260,4 +267,5 @@ security-gtp -> wizard-5 (exmp) -> edit inbound
 
 icacls D:\mynewkey.pem /inheritance:r
 icacls D:\mynewkey.pem /grant:r %USERNAME%:R
+
 
