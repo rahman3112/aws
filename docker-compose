@@ -23,6 +23,7 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
 
+docker-compose up –d
 --------------------------------------------------
          SCALED 
 
@@ -49,6 +50,8 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
 
+
+docker-compose up --scale web=2 -d
 ----------------------------------------------------------------
 
         POSTGRES
@@ -94,6 +97,9 @@ INSERT INTO users (name, email) VALUES
    ('Alice', 'alice@example.com'),
    ('Bob', 'bob@example.com');
 
+docker compose up -d
+docker exec -it <container_name> psql -U demo -d demo_db
+SELECT * FROM users;
 ---------------------------------------------------------------
 
         FLASK FILES UPLOADED
@@ -132,4 +138,8 @@ CMD ["python", "app.py"]
       - db
 
 docker compose up --build
-        
+
+
+docker-compose up --scale web=2 -d
+docker-compose up -d
+docker-compose down
