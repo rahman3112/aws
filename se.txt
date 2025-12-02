@@ -266,7 +266,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 
 sudo docker build -t mavenp .
-sudo docker run -d -p 9090:8080 mavenp  (8080 as tomcat)
+sudo docker run -d -p 9091:8080 mavenp  (8080 as tomcat)
 
 cd target->ls -> get the .war filename example lab-aws.war
 
@@ -275,12 +275,13 @@ go to: http://54.167.22.74:9090/my-lab-web-app/ (the war file name)
 (to add edit security grp
 
 security-gtp -> wizard-5 (exmp) -> edit inbound
-->add -> port 9090 -> 0.0.0/0
+->add -> port 9091 -> 0.0.0/0
 
 
 
 icacls D:\mynewkey.pem /inheritance:r
 icacls D:\mynewkey.pem /grant:r %USERNAME%:R
+
 
 
 
