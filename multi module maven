@@ -1,7 +1,20 @@
+First child create simple java
+second no simple searc and create web 
+
 <dependency>
 		<groupId>KMIT</groupId>
-			<artifactId>MultimoduleChild1</artifactId>
+			<artifactId>KMultiModule</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 	</dependency>
 
 ADD THIS IN CHILD 2 IN DEPENDENCY
+
+
+GO IN MultiModule pom.xml and remove the entire parent tag and save 
+
+Then build using all 3 steps from the beginning 
+parent 
+child1
+child2
+
+then run on tomcatser the second child 
