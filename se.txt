@@ -281,7 +281,7 @@ security-gtp -> wizard-5 (exmp) -> edit inbound
 
 icacls D:\mynewkey.pem /inheritance:r
 icacls D:\demo.pem /grant:r "$env:USERNAME`:R"
-
+icacls "prac2.pem" /grant:r "%USERNAME%:(R)"
 
 
 
